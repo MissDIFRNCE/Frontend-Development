@@ -1,0 +1,251 @@
+/* ALGEMEEN */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+
+/* HEADER AND NAVIGATION */
+#main-header {
+  background-color: #d2382d;
+  width: 100vw;
+}
+
+nav > ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-height: 100px;
+}
+
+ul > li:first-of-type {
+  max-width: 200px;
+  display: none;
+  align-items: center;
+  flex-direction: inherit;
+}
+
+ul > li:first-of-type > img {
+  height: 150%;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#menu-item > h2 {
+  display: none;
+  color: white;
+  padding: 10px 0;
+}
+
+#menu-item-icon {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+/* MOBILE HEADER AND NAVIGATION */
+#mobile-header {
+  background-color: #d2382d;
+  width: 100vw;
+}
+
+#mobile-header > div:first-of-type {
+}
+
+#mobile-header > div:nth-of-type(2) {
+}
+
+#mobile-nav {
+  width: 20vw;
+  height: 20vw;
+  background-color: #d2382d;
+  border-radius: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw;
+  margin-top: 10px;
+}
+
+#mobile-nav > h1 {
+  display: none;
+}
+
+#menu-dot {
+  background-color: white;
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+}
+
+#mobile-menu-item-1 {
+  width: 20vw;
+  height: 20vw;
+  background-color: #285da9;
+  border-radius: 50% 50% 0% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vw;
+  transform: rotate(45deg);
+}
+
+#mobile-menu-item-1 > img {
+  height: 100%;
+  transform: rotate(-45deg);
+}
+
+/* AGENDA PREVIEW */
+#agenda-preview {
+  background-color: #285da9;
+  color: white;
+  width: 85vw;
+  padding: 1rem;
+  height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 5px 5px 15px grey;
+}
+
+#agenda-preview > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+
+#agenda-preview > div > a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* OBSTAKELS */
+#section-obstakels {
+  width: 85vw;
+}
+
+#section-obstakels > header {
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+}
+
+#section-obstakels > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-auto-rows: minmax(150px, auto);
+    grid-gap: 20px;
+  margin: 20px 0;
+}
+
+#sorteren-dropdown > select {
+  background-color: lightgray;
+  border: none;
+  border-radius: 0 !important;
+  border-image: none;
+}
+
+/* ACHTERGRONDAFBEELDINGEN OBSTAKELS */
+.obstakel-holder {
+  background-position: center;
+  background-size: cover;
+  height: 150px;
+  padding: 10px;
+}
+
+.obstakel-holder > a {
+  color: white;
+}
+
+#obstakel-armen {
+  background-image: url(https://images.pexels.com/photos/2080544/pexels-photo-2080544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#obstakel-benen {
+  background-image: url(https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+#obstakel-buik {
+  background-image: url(https://images.pexels.com/photos/196640/pexels-photo-196640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+}
+
+/* TRAINERS */
+#section-trainers {
+  width: 100vw;
+  background-color: #bcd0e7;
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  padding: 2rem 5rem;
+}
+
+#section-trainers > h2 {
+  border-bottom: 1px solid;
+  margin-bottom: 20px;
+}
+
+#trainers-fotos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#trainers-fotos > div {
+  width: 150px;
+  height: 150px;
+  background-image: url(https://images.pexels.com/photos/1618042/pexels-photo-1618042.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  align-items: flex-end;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+#trainers-fotos > div > p {
+  padding-bottom: 10px;
+}
+
+
+
+
+
+footer {
+  position: fixed;
+  bottom: 4vh;
+  right: 7vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+

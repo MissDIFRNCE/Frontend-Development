@@ -1,0 +1,36 @@
+/*@media screen and (max-width: 450px) {
+	nav {
+		display: none;
+	}
+}*/
+
+/*@media screen and (min-width: 451px) {
+	footer {
+		display: none;
+	}
+}*/
+
+@media screen and (max-width: 500px) {
+	#menu-item-icon {
+		width: 20vw;
+		height: 20vw;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	#menu-item-icon {
+		display: none;
+	}
+
+	#menu-item > h2 {
+		display: flex;
+	}
+
+	ul > li:first-of-type {
+		display: flex;
+	}
+
+	header {
+		margin: 20px 0;
+	}
+}
