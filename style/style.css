@@ -248,6 +248,7 @@ li {
 /* OBSTAKEL - ASIDE */
 #main-obstakel > h1 {
   margin-bottom: 2rem;
+  width: 85vw;
 }
 
 aside {
