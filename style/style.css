@@ -7,6 +7,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
+  /*Bron: https://fonts.google.com/specimen/Montserrat*/
+  background-color: white;
 }
 
 a {
@@ -18,6 +20,25 @@ a:hover {
   color: white;
 }
 
+a:focus {
+  color: orange;
+}
+
+button {
+  background-color: #295da9;
+  color: white;
+  font-size: 1em;
+  padding: 10px;
+}
+
+*:focus {
+  outline-color: orange;
+  background-color: orange;
+  transition: all 0s;
+}
+
+
+
 #main-index {
   display: flex;
   flex-direction: column;
@@ -28,8 +49,11 @@ a:hover {
 
 #main-obstakel {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  align-items: center;
+  width: 90vw;
+  margin: auto;
+  /*Bron: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout*/
 }
 
 /* HEADER AND NAVIGATION */
@@ -63,13 +87,13 @@ li {
   justify-content: center;
 }
 
-#menu-item > h2 {
+.menu-item > h2 {
   display: none;
   color: white;
   padding: 10px 0;
 }
 
-#menu-item-icon {
+.menu-item-icon {
   max-width: 80px;
   max-height: 80px;
 }
@@ -135,7 +159,13 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  box-shadow: 5px 5px 15px grey;
+  transition: all 0.5s ease-out;
+  box-shadow: 0px 0px 0px grey;
+  /*Bron: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp*/
+}
+
+#agenda-preview:hover {
+  box-shadow: 5px 5px 10px grey;
 }
 
 #agenda-preview > div {
@@ -146,9 +176,14 @@ li {
   padding: 10px 0;
 }
 
-#agenda-preview > div > a {
+#agenda-preview a {
   color: white;
   text-decoration: underline;
+  transition: all 0.5s ease-out;
+}
+
+#agenda-preview a:hover {
+  color: #ff4539;
 }
 
 /* INDEX - OBSTAKELS */
@@ -161,13 +196,21 @@ li {
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
 }
 
 #section-obstakels > div {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   grid-auto-rows: minmax(150px, auto);
-    grid-gap: 20px;
+  grid-gap: 20px;
+  /*Bron:https://www.w3schools.com/css/css_grid.asp*/
+  /*Bron:https://alligator.io/css/css-grid-layout-fr-unit/*/
+  /*Bron:https://codepen.io/rouws/pen/xavvge?editors=1100*/
+  /*Bron:https://gridbyexample.com/examples/*/
   margin: 20px 0;
 }
 
@@ -183,28 +226,53 @@ li {
   background-position: center;
   background-size: cover;
   height: 150px;
-  padding: 10px;
+  /*padding: 10px;*/
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease-out;
+  /*Bron: https://www.w3schools.com/css/css3_transitions.asp*/
+}
+
+.obstakel-holder:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.obstakel-holder:hover > a > p:nth-of-type(2) {
+  top: 115px;
 }
 
 .obstakel-holder > a {
   color: white;
+  position: relative;
+  display: block;
 }
 
-.obstakel-holder > a > p {
+.obstakel-holder > a > p:first-of-type {
   height: 100%;
+  padding: 10px;
+}
+
+.obstakel-holder > a > p:nth-of-type(2){
+  position: absolute;
+  top: 150px;
+  width: 90vw;
+  padding: 10px;
+  background-color: rgba(0,0,0,0.5);
+  font-size: 12px;
 }
 
 #obstakel-armen {
   background-image: url(https://images.pexels.com/photos/2080544/pexels-photo-2080544.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-}
+}/*Bron foto: https://www.pexels.com*/
 
 #obstakel-benen {
   background-image: url(https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-}
+}/*Bron foto: https://www.pexels.com*/
 
 #obstakel-buik {
   background-image: url(https://images.pexels.com/photos/196640/pexels-photo-196640.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
-}
+}/*Bron foto: https://www.pexels.com*/
 
 /* INDEX - TRAINERS */
 #section-trainers {
@@ -245,31 +313,158 @@ li {
   background-color: rgba(255,255,255,0.7);
 }
 
-/* OBSTAKEL - ASIDE */
-#main-obstakel > h1 {
-  margin-bottom: 2rem;
-  width: 85vw;
-}
-
-aside {
-  background-color: lightgray;
-  width: 400px;
-  height: 60vh;
-}
-
-#main-obstakel > section {
+/* OBSTAKEL */
+#header-go-home {
+  background-color: #285da9;
+  padding: 10px;
+  color: white;
   display: flex;
-  width: 85vw;
-  justify-content: space-between;
+  margin: 0;
 }
 
-iframe {
-  width: 720px;
-  height: 400px;
+#header-go-home a, #header-go-home svg {
+  color: white;
+  fill: white;
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
+#header-go-home h2 {
+  margin: auto;
+  transform: skewY(0deg);
+  /*Bron:https://www.w3schools.com/css/css3_2dtransforms.asp*/
+  transition: all 1s;
+}
 
+#header-go-home h2:hover {
+  transform: skewY(180deg);
+  /*Bron:https://www.w3schools.com/css/css3_2dtransforms.asp*/
+}
 
+#header-go-home a:hover {
+  text-decoration: none;
+}
+
+.main-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /*width: 90vw;*/
+}
+
+.main-section:first-of-type {
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.main-section:first-of-type iframe {
+  max-width: 30rem;
+}
+
+.main-section:first-of-type p {
+  max-width: 30rem;
+  line-height: 1em;
+  transition: all 0.5s ease-out;
+  /*Bron: https://www.w3schools.com/css/css3_transitions.asp*/
+}
+
+.main-section:first-of-type p:hover {
+  line-height: 1.6em;
+  
+}
+
+.main-section:first-of-type a {
+  display: block;
+  text-decoration: underline;
+}
+
+.main-section:first-of-type a:visited {
+  color: black;
+}
+
+.main-section:nth-of-type(2) {
+  display: flex;
+  align-items: flex-start;
+  max-width: 30rem;
+  flex-direction: column;
+}
+
+.main-section:nth-of-type(2) > div {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.main-section:nth-of-type(2) div > div {
+  background-color: #bcd0e7;
+  border: 1px solid #295da9;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s ease-out;
+  /*Bron: https://www.w3schools.com/css/css3_transitions.asp*/
+}
+
+.main-section:nth-of-type(2) div > div:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.main-section:nth-of-type(2) div > div:nth-of-type(3) {
+  background-color: white;
+}
+
+.main-section:nth-of-type(3) {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 3em;
+  max-width: 30rem;
+  flex-direction: column;
+}
+
+.main-section:nth-of-type(3) > div {
+  width: 90vw;
+  max-width: 30rem;
+}
+
+.main-section:nth-of-type(3) article {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 50px;
+  border-top: 1px solid #bcd0e7;
+  margin-bottom: 10px;
+}
+
+.main-section:nth-of-type(3) article > img {
+  max-width: 75px;
+  max-height: 50px;
+}
+
+.main-section:nth-of-type(3) article > p {
+  width: 80%;
+}
+
+.main-section:nth-of-type(3) article > p:nth-of-type(2) {
+  font-size: 0.8em;
+}
+
+.main-section:nth-of-type(3) button {
+  width: 100%;
+  border: none;
+  box-shadow: 5px 5px 0px #1a3c6f;
+  /*Bron: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp*/
+  transition: all 0.5s ease-out;
+  /*Bron: https://www.w3schools.com/css/css3_transitions.asp*/
+}
+
+.main-section:nth-of-type(3) button:hover {
+  box-shadow: 0px 0px 0px #1a3c6f;
+  /*Bron: https://www.w3schools.com/cssref/css3_pr_box-shadow.asp*/
+  background-color: #1a3c6f;
+}
+
+/* NAVIGATION MOBILE (OLD) */
 footer {
   position: fixed;
   bottom: 4vh;
@@ -279,4 +474,23 @@ footer {
   align-items: center;
   flex-direction: column;
 }
+
+/* FEEST EN GEKKIGHEID */
+.feest {
+  background-image: url("../images/confetti.gif");
+}
+
+@keyframes flickerAnimation {
+  0% {background-color: orange;}
+  50% {background-color: hotpink;}
+  100% {background-color:yellow;}
+  /*Bron: https://codepen.io/engsiang/pen/eWeNOP*/
+}
+
+.knipperen {
+  animation: flickerAnimation .5s infinite !important;
+  /*Bron: https://codepen.io/engsiang/pen/eWeNOP*/
+}
+
+
 

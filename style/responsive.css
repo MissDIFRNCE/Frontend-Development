@@ -11,7 +11,7 @@
 }*/
 
 @media screen and (max-width: 500px) {
-	#menu-item-icon {
+	.menu-item-icon {
 		width: 20vw;
 		height: 20vw;
 	}
@@ -33,15 +33,14 @@
 		justify-content: space-around;
 		width: 80%;
 	}
-
 }
 
 @media screen and (min-width: 900px) {
-	#menu-item-icon {
+	.menu-item-icon {
 		display: none;
 	}
 
-	#menu-item > h2 {
+	.menu-item > h2 {
 		display: flex;
 	}
 
