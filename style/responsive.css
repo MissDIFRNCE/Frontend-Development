@@ -43,6 +43,16 @@
 	}
 }
 
+@media screen and (max-width: 900px) {
+	.obstakel-holder > a > p {
+		top: 115px;
+	}
+
+	.obstakel-holder:hover {
+		transform: scale(1);
+	}
+}
+
 @media screen and (min-width: 900px) {
 	.menu-item-icon {
 		display: none;
