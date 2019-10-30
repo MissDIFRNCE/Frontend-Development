@@ -1,3 +1,5 @@
+<!-- Marieke de Hoop - 500797554 - Klas 205 - Frontend Development - Vasilis van Gemert -->
+
 <!DOCTYPE html>
 
 <html lang="nl">
@@ -52,7 +54,7 @@
 			</div>
 			<div>
 				<a href="#">Bekijk training</a>
-				<a href="#">Bekijk obstakel</a>
+				<a href="obstakel.html">Bekijk obstakel</a>
 			</div>
 		</section>
 
@@ -212,6 +214,29 @@
 			</div>
 		</section>
 	</main>
+
+	<footer>
+		<section id="lightbox-inschrijven">
+			<div>
+				<h2>Schijf je in om mee te doen aan de American Ninja Warrior wedstrijd!</h2>
+				<form action="obstakel.html" method="post">
+					<div>
+						<label for="naam">Naam</label>
+						<input type="text" id="naam" name="naam-lid" required>
+					</div>
+					<div>
+						<label for="mail">E-mailadres</label>
+						<input type="email" id="mail" name="user_mail" required>
+					</div>
+					<div>
+						<label for="datum">Geboortedatum</label>
+						<input type="date" id="date" name="expiration">
+					</div>
+				</form>
+			<!-- Bron: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form -->
+			</div>
+		</section>
+	</footer>
 
 	<!-- <footer>
 		<div id="mobile-menu-item-1">
