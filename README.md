@@ -29,6 +29,9 @@ https://www.w3schools.com/css/css3_2dtransforms.asp
 Voor 'flickerAnimation'
 https://codepen.io/engsiang/pen/eWeNOP
 
+Voor horizontaal scrollen
+https://codeburst.io/how-to-create-horizontal-scrolling-containers-d8069651e9c6
+
 Voor afbeeldingen
 https://www.pexels.com
 
