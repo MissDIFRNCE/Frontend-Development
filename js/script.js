@@ -156,6 +156,24 @@ if(leesMeer) {
 
 
 
+var inschrijfKnop = document.querySelector('footer:first-of-type > section:first-of-type > button');
+var lightbox = document.querySelector('footer:nth-of-type(2)');
+var kruisje = document.querySelector('footer:nth-of-type(2) span');
+
+function inschrijven() {
+	// window.alert("Het werkt!");
+	lightbox.classList.add("tonen");
+}
+
+inschrijfKnop.addEventListener("click",inschrijven);
+
+function sluiten() {
+	lightbox.classList.remove("tonen");
+}
+
+kruisje.addEventListener("click",sluiten);
+
+
 
 
 

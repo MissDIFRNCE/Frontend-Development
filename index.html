@@ -18,24 +18,28 @@
 		<nav>
 			<ul>
 				<li>
+					<!-- Logo -->
 					<a href="index.html">
 						<img src="images/logo-anw.png" alt="American Ninja Warrior Logo">
 						<!--Bron: https://www.americanninjawarriornation.com-->
 					</a>
 				</li>
 				<li>
+					<!-- Menu item: nachmodus -->
 					<a href="#" class="menu-item">
 						<img class="menu-item-icon" src="images/nacht-icon.png" alt="nachtmodus">
 						<h2>Nachtmodus</h2>
 					</a>
 				</li>
 				<li>
+					<!-- Menu item: Feestmodus -->
 					<a href="#" class="menu-item">
 						<img class="menu-item-icon" src="images/feest-icon.png" alt="feestmodus">
 						<h2>Feestmodus</h2>
 					</a>
 				</li>
 				<li>
+					<!-- Menu item: Profiel -->
 					<a href="#" class="menu-item">
 						<img class="menu-item-icon" src="images/profiel-icon.png" alt="">
 						<h2>Profiel</h2>
@@ -46,6 +50,7 @@
 	</header>
 
 	<main id="main-index">
+		<!-- Agenda banner -->
 		<section id="agenda-preview">
 			<h2>Vandaag op de agenda</h2>
 			<div>
@@ -62,6 +67,7 @@
 		<section id="section-obstakels">
 			<header>
 				<h2>Armen</h2>
+				<!-- Dropdown sorteerfunctie -->
 				<div id="sorteren-dropdown">
 					<select>
 						<option value="" selected="selected">Sorteer op...</option>
@@ -75,11 +81,11 @@
 				</div>
 			</header>
 
+			<!-- Obstakels -->
 			<div class="obstakels-armen">
 				<article class="obstakel-holder">
 					<h2>Circle slider</h2>
 					<a href="obstakel.html">
-						<!-- <p>Circle Slider</p> -->
 						<p>4 trainingen binnen 25km beschikbaar!</p>
 					</a>
 				</article>
@@ -202,54 +208,82 @@
 			</div>
 		</section>
 
+		<!-- Foto's trainers -->
 		<section id="section-trainers">
 			<h2>Trainers</h2>
 			<div id="trainers-fotos">
-				<div><p>Pierre Bokma</p></div>
-				<div><p>Henry van Loon</p></div>
-				<div><p>Leo Alkemade</p></div>
-				<div><p>Guus Meeuwis</p></div>
-				<div><p>Klaas van der eerden</p></div>
-				<div><p>Andre Hazes</p></div>
+				<div>
+					<a href="#"><p>Pierre Bokma</p></a>
+				</div>
+				<div>
+					<a href="#"><p>Henry van Loon</p></a>
+				</div>
+				<div>
+					<a href="#"><p>Leo Alkemade</p></a>
+				</div>
+				<div>
+					<a href="#"><p>Guus Meeuwis</p></a>
+				</div>
+				<div>
+					<a href="#"><p>Klaas van der eerden</p></a>
+				</div>
+				<div>
+					<a href="#"><p>Andre Hazes</p></a>
+				</div>
 			</div>
 		</section>
 	</main>
 
 	<footer>
-		<section id="lightbox-inschrijven">
-			<div>
-				<h2>Schijf je in om mee te doen aan de American Ninja Warrior wedstrijd!</h2>
-				<form action="obstakel.html" method="post">
-					<div>
-						<label for="naam">Naam</label>
-						<input type="text" id="naam" name="naam-lid" required>
-					</div>
-					<div>
-						<label for="mail">E-mailadres</label>
-						<input type="email" id="mail" name="user_mail" required>
-					</div>
-					<div>
-						<label for="datum">Geboortedatum</label>
-						<input type="date" id="date" name="expiration">
-					</div>
-				</form>
-			<!-- Bron: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form -->
-			</div>
+		<!-- Knop inschrijven -->
+		<section>
+			<h3>Meedoen aan American Ninja Warrior?</h3>
+			<button>Schrijf je in!</button>
+		</section>
+
+		<section>
+			<a href="#"><h3>Over American Ninja Warrior</h3></a>
+			<p>De Amerikaanse Ninja Warrior is een Amerikaanse sportvermaakwedstrijd, een spin-off van de Japanse televisieserie Sasuke. Het bevat honderden deelnemers die proberen een reeks hindernisbanen te voltooien in de hoop door te gaan naar de nationale finale en de 'American Ninja Warrior' van het seizoen te worden.</p>
+		</section>
+
+		<section>
+			<h3>Contact</h3>
+			<button>Stuur ons een e-mail</button>
+			<button>Bel ons op</button>
 		</section>
 	</footer>
 
-	<!-- <footer>
-		<div id="mobile-menu-item-1">
-  			<img src="images/icons/profile.png">
-		</div>
-
-		<div id="mobile-nav">
-			<h1>Menu</h1>
-			<div id="menu-dot"></div>
-			<div id="menu-dot"></div>
-			<div id="menu-dot"></div>
-		</div>
-	</footer> -->	
+	<!-- Lightbox voor inschrijven -->
+	<footer id="lightbox-inschrijven" class="verborgen">
+		<div>
+			<span>&times;</span>
+			<!-- https://www.w3schools.com/howto/howto_js_lightbox.asp -->
+			<h2>Schijf je in om mee te doen aan de American Ninja Warrior wedstrijd!</h2>
+			<form action="index.html" method="post">
+				<div>
+					<label for="naam">Naam</label>
+					<input type="text" id="naam" name="naam-lid" required>
+				</div>
+				<div>
+					<label for="mail">E-mailadres</label>
+					<input type="email" id="mail" name="user_mail" required>
+				</div>
+				<div>
+					<label for="datum">Geboortedatum</label>
+					<input type="date" id="date" name="DoB">
+					<p>Om mee te mogen doen aan ANW moet je minimaal 18 jaar oud zijn.</p>
+				</div>
+				<div>
+					<label for="telefoonnummer">Telefoonnummer</label>
+					<input type="tel" id="tel" name="phone-number">
+				</div>
+				<div>
+					<button type="submit">Schrijf me in</button>
+				</div>
+			</form>
+			<!-- Bron: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_structure_an_HTML_form -->
+			</div>
+	</footer>	
 
 	<script src="js/script.js"></script>
 </body>
